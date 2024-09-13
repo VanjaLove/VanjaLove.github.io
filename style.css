@@ -1,0 +1,164 @@
+
+
+@font-face {
+    font-family: "bian";
+    src: url("fonts/bianzhidai-Messier.woff")format("woff");
+    font-weight: normal;
+    font-style: round;
+  
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0
+    ;
+    font-weight: bold;
+    font-size: 36pt;
+    max-width: 100vw;
+
+    
+  }
+
+  
+p2{
+  background-color:#BAB3FC
+
+}
+
+p3{
+  font-weight: normal;
+white-space: pre-wrap;
+}
+   
+button{
+  all:unset
+}
+
+a{
+  color:black;
+}
+
+a:active {
+  color: red;
+}
+
+
+  p4{
+text-decoration: underline;
+  }
+
+.container{
+  margin: 40px 5px 0 5px;
+  max-width: calc(100%-10px);
+}
+
+#header{
+  margin: 0 0 0 5px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  -webkit-transform: translateZ(0);
+  width: calc(100%-5px)
+  
+
+  }
+
+  .text{
+max-width: 6.3in;
+height: 9.7in;
+font-family: sans-serif;
+font-size: 12pt;
+margin: 5px auto;
+padding: 1in 1in;
+outline: dotted;
+margin-bottom: 20px;
+  }
+  
+
+  #title{
+
+  }
+
+  #screensaver {
+    height: 100vh;
+    max-width: 100vw;
+    mix-blend-mode: multiply;
+    width: 100vw;
+    position: fixed;
+    filter: brightness(-10);
+    
+    }
+    
+
+
+  #title:hover{
+    background-color:#BAB3FC
+
+  }
+
+  a:hover{
+    background-color:#BAB3FC
+
+  } 
+  button:hover{
+    background-color:#BAB3FC
+
+  }
+
+
+  img{
+    max-height: 600px;
+    max-width: 100%;
+display: block;
+
+  }
+
+ .list img{
+ } 
+
+ .list:hover img{
+  outline: 2px dotted red;
+ }
+
+.project{
+  display: block;
+max-width: calc(100%-10px);
+overflow: hidden;
+margin: 0 0 20px 0;
+padding-bottom:0 ;
+}
+
+.project:hover{
+  background-color:white
+
+
+}
+
+#footer{
+  padding: 0 5px 0 5px;
+position:relative;
+background-color:#E7E682;
+z-index: 100;
+-webkit-transform: translateZ(0)
+}
+
+
+@media (max-width: 1000px) {
+
+
+  .text{
+    max-width: 6.3in;
+    height: auto;
+    max-height: 3000px;
+    font-family: sans-serif;
+    font-size: 12pt;
+    margin: 5px auto;
+    padding: 10px;
+    outline: dotted;
+      }
+      
+
+#header{
+  position: relative;
+}
+}

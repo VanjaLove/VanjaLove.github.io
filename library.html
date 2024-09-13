@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Library</title>
+
+    <link rel="icon" type="image/x-icon" href="img/icon.png"/>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="jquery.ui.touch-punch.min.js"></script>
+
+<script>
+  $( function() {
+  $( ".div" ).draggable();
+} );
+
+</script>
+<style>
+html,body{
+
+}
+
+a{
+  z-index: 1;
+}
+.project{
+  z-index: 1;
+}
+
+#spawn{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+outline: dotted;
+z-index: -1;
+background-color:#E7E682;
+
+
+}
+
+.div{position: absolute;
+max-width: 100px;
+z-index: 3
+}
+  </style>
+
+  </head>
+  <body>
+   
+<div id="spawn">
+
+</div>
+
+  <img class="div" >
+    <div id="header">
+      
+      <span style="font-family: 'bian';"> V</span>anja   <span style="font-family: 'bian';">H</span> amdahl's library. <a href="index.html">Back to portfolio.</a>
+
+
+    </div>
+    
+    <div class="container">
+
+
+      <a class="list" href="screens.html">
+        Collection of photos of screens
+        <img class="div" src="img/screens/ezgif.com-resize.gif" alt="">
+      </a>
+
+      <br>
+
+      <a>
+        <a class="list"href="Another Day.html">Another day</a>
+      </a>
+
+      <br>
+
+      <a class="list"href="om six sign.html">Om sex tecken / Six Signs</a>
+
+      <br>
+   
+      <a class="list"href="photos-1.html">Photos 1
+        <img class="div" src="img/wetransfer_ezgif-com-optimize-1-kopia-2-gif_2024-09-09_0001/ezgif.com-optimize (1).gif">
+      </a>
+
+      <br>
+        
+      <a class="list"href="photos-2.html">Photos 2
+         <img class="div" src="img/wetransfer_ezgif-com-optimize-1-kopia-2-gif_2024-09-09_0001/ezgif.com-resize (1).gif">
+      </a>
+
+      <br>
+
+        <a class="list"href="photos-3.html">Photos 3
+        <img class="div" src="img/wetransfer_ezgif-com-optimize-1-kopia-2-gif_2024-09-09_0001/ezgif.com-speed (1).gif">
+      </a>
+
+      <br>
+
+      <a class="list"href="photos-4.html">Photos 4
+        <img class="div" src="img/wetransfer_ezgif-com-optimize-1-kopia-2-gif_2024-09-09_0001/ezgif.com-optimize (1) (kopia 2).gif">
+      </a>
+
+
+       
+  </div>
+
+  <script>
+    function scrolldiv() {
+        var elem = document
+            .getElementById("footer");
+        elem
+            .scrollIntoView();
+    }
+
+
+    
+</script>
+
+
+<script>
+
+
+        // collect all the divs
+        var divs = document.getElementsByClassName('div');
+      // get window width and height
+      const element = document.getElementById("spawn");
+      var winWidth = element.clientWidth -300 ;
+      var winHeight = element.clientHeight -300 ;
+      
+      // i stands for "index". you could also call this banana or haircut. it's a variable
+      for ( var i=0; i < divs.length; i++ ) {
+         
+          // shortcut! the current div in the list
+          var thisDiv = divs[i];
+          
+          // get random numbers for each element
+          randomTop = getRandomNumber(0, winHeight);
+          randomLeft = getRandomNumber(0, winWidth);
+          
+          // update top and left position
+          thisDiv.style.top = randomTop +60 +"px";
+          thisDiv.style.left = randomLeft +60 +"px";
+          
+      }
+      
+      // function that returns a random number between a min and max
+      function getRandomNumber(min, max) {
+          
+        return Math.random() * (max - min) + min;
+          
+      }
+
+
+
+
+</script>
+  </body>
+</html>

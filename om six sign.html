@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Vanja Hamdahl</title>
+
+    <link rel="icon" type="image/x-icon" href="img/icon.png"/>
+    <link rel="stylesheet" href="style.css"/>
+<style>
+html,body{
+  background-color:#E7E682
+
+}
+
+#spawn{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+outline: dotted;
+}
+
+.div{position: absolute;
+max-width: 150px;}
+  </style>
+
+  </head>
+  <body>
+   
+
+
+
+
+      <div id="header"><a href="library.html" >(↜)</a> &emsp;&emsp;&emsp;Om Sex Tecken / Six Signs</div>
+  
+    <div class="container">
+
+
+      <div class="text">
+       <br>
+       <p3>
+När jag började med vävarna, tittade jag mycket på romantikens landskapsmålare.
+Till exempel William Turner. Någon beskrev att se på hans verk som att få
+ögonlocken avskurna, man möter en verklighet som inte är objektiv men som känns
+mer sann.
+Hur kan ett ögonblick kan göra att verkligheten nästan går sönder?
+Jag tror att det handlar om ett sätt att se, nästan rakt igenom, mot det osynliga. Att
+inte ta den sinnliga världen för given.
+Simone Weil skriver om hur människan måste ogöra sig själv, för att världen ska
+kunna existera i sin absoluta skönhet, utan att vår blick, vårt varande, står i vägen.
+Hon längtar efter att se ett landskap när hon inte är där.
+Jag längtar efter att se ett landskap när jag inte är där.
+Det handlar om att betrakta, betraktelse.
+Jag intresserar mig för Skärmar, hur vi tittar genom dem. Jag fascineras av
+livestreams, Jag ser på örnar som äter från ett dött djur i ett naturreservat och får en
+märklig känsla. Den gryniga webcamkvaliteten passar inte ihop med det riktiga.
+Djuren som är, världen som finns. Fast bilderna överförs live, är verkligheten på
+skärmen en helt annan, det uppstår ett glapp.
+Ibland när en bild visas på en skärm överlappar pixlarnas rutnät med osynliga
+mönster i bilden, och det uppstår interferens i skärningspunkterna. Det blir som en
+aura, ett spår.
+Jag tänker på hur internet breder ut sig som en stor sjö runtomkring mig.
+Ödelandskapen som finns mellan punkterna som betraktas.
+En kvinna filmar utsikten från sitt hus 2008 och jag är den enda som sett det, klippet
+har inga visningar. Jag känner akut närvaro, hennes blick, som William Turners,
+vibrerar i mig, jag har inga ögonlock.
+Einar sa till mig att människor som bara är, för sig själva, inte är roliga och gulliga
+utan vackra.
+Det är ett visst tillstånd som jag hela tiden försöker återskapa, också i min konst. Ett
+flyktigt tillstånd, ett tillstånd av andakt, när verkligheten vibrerar. Jag tänker på Weils
+nåd, att det kanske är sprickorna som ibland uppstår, ljusglimtarna, mellanrummen.
+En gång missade jag mitt stopp och fastnade på en busstation mitt i ett fält. Det var
+mitt i natten, kolsvart.
+Varje gång en bil körde förbi, lyste världen upp i deras helljus. Mellan bilarna låg
+mörkret stilla. Då fanns bara väntan, och jag som en glaskropp, ett kärl.
+      </p3>
+
+      </div>
+      
+      </div>
+       
+  </div>
+
+  <script>
+    function scrolldiv() {
+        var elem = document
+            .getElementById("footer");
+        elem
+            .scrollIntoView();
+    }
+
+
+    
+</script>
+
+
+<script>
+
+
+        // collect all the divs
+        var divs = document.getElementsByClassName('div');
+      // get window width and height
+      const element = document.getElementById("spawn");
+      var winWidth = element.clientWidth -300 ;
+      var winHeight = element.clientHeight -300 ;
+      
+      // i stands for "index". you could also call this banana or haircut. it's a variable
+      for ( var i=0; i < divs.length; i++ ) {
+         
+          // shortcut! the current div in the list
+          var thisDiv = divs[i];
+          
+          // get random numbers for each element
+          randomTop = getRandomNumber(0, winHeight);
+          randomLeft = getRandomNumber(0, winWidth);
+          
+          // update top and left position
+          thisDiv.style.top = randomTop +60 +"px";
+          thisDiv.style.left = randomLeft +60 +"px";
+          
+      }
+      
+      // function that returns a random number between a min and max
+      function getRandomNumber(min, max) {
+          
+        return Math.random() * (max - min) + min;
+          
+      }
+
+
+
+
+</script>
+  </body>
+</html>
