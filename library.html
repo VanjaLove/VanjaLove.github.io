@@ -40,6 +40,15 @@ background-color:#E7E682;
 
 
 }
+#blackout{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+z-index: 100;
+background-color: black;
+display: none;
+
+}
 
 .div{position: absolute;
 max-width: 100px;
@@ -49,9 +58,15 @@ z-index: 3
 
   </head>
   <body>
+    <audio id="Place">
+      <source  src="img/The Place.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+
    
 <div id="spawn">
-
+</div>
+<div id="blackout">
 </div>
 
   <img class="div" >
@@ -105,20 +120,37 @@ z-index: 3
       </a>
 
 
+      <br>
+
+      <audio id="audioContainer">
+        <source src="img/The Place.mp3" type="audio/mpeg">
+      </audio>
+      
+      
+      <button onclick="playMp3()" type="button">Photos 5</button>
+      
+      <script>
+      const audioContainer = document.getElementById("audioContainer"); 
+      
+      function playMp3() { 
+        audioContainer.play(); 
+        alert("【someone else is here right now】");
+        document.getElementById("blackout").style.display = "block"
+      } 
+      
+      
+      </script>
+
+      <br>
+
+      <a class="list"href="dream.html">Dream
+       
+      </a>
+
+
        
   </div>
 
-  <script>
-    function scrolldiv() {
-        var elem = document
-            .getElementById("footer");
-        elem
-            .scrollIntoView();
-    }
-
-
-    
-</script>
 
 
 <script>
@@ -158,5 +190,6 @@ z-index: 3
 
 
 </script>
+
   </body>
 </html>
