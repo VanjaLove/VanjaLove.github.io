@@ -31,7 +31,9 @@ white-space: pre-wrap;
 }
    
 button{
-  all:unset
+  all:unset;
+  text-decoration: underline;
+
 }
 
 a{
@@ -97,13 +99,16 @@ margin-bottom: 20px;
   }
 
   a:hover{
-    background-color:#BAB3FC
+    background-color:#BAB3FC;
+
 
   } 
   button:hover{
-    background-color:#BAB3FC
-
+    background-color:#BAB3FC;
   }
+  button:active{
+color: red;  }
+
 
 
   img{
@@ -113,8 +118,10 @@ display: block;
 
   }
 
- .list img{
- } 
+  .div{position: absolute;
+    max-width: 100px;
+    z-index: 3
+    }
 
  .list:hover img{
   outline: 2px dotted red;
@@ -146,7 +153,7 @@ z-index: 100;
 @media (max-width: 1000px) {
 
 
-  .text{
+ .text{
     max-width: 6.3in;
     height: auto;
     max-height: 3000px;
@@ -156,9 +163,15 @@ z-index: 100;
     padding: 10px;
     outline: dotted;
       }
+
+.div{position: absolute;
+    max-width: 60px;
+    z-index: 3
+    }
       
 
 #header{
   position: relative;
 }
 }
+

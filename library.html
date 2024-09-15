@@ -45,15 +45,13 @@ background-color:#E7E682;
   height: 100vh;
   width: 100vw;
 z-index: 100;
+opacity: 90%;
 background-color: black;
 display: none;
 
 }
 
-.div{position: absolute;
-max-width: 100px;
-z-index: 3
-}
+
   </style>
 
   </head>
@@ -72,7 +70,7 @@ z-index: 3
   <img class="div" >
     <div id="header">
       
-      <span style="font-family: 'bian';"> V</span>anja   <span style="font-family: 'bian';">H</span> amdahl's library. <a href="index.html">Back to portfolio.</a>
+      <span style="font-family: 'bian';"> V</span>anja   <span style="font-family: 'bian';">H</span> amdahl's archive. <a href="index.html">Back to portfolio.</a>
 
 
     </div>
@@ -133,8 +131,9 @@ z-index: 3
       const audioContainer = document.getElementById("audioContainer"); 
       
       function playMp3() { 
-        alert("【someone else is here right now】");
         audioContainer.play(); 
+        alert("【someone else is here right now】");
+
         document.getElementById("blackout").style.display = "block";
       } 
       
