@@ -15,9 +15,30 @@
     font-weight: bold;
     font-size: 36pt;
     max-width: 100vw;
+    background-color: white;
 
     
   }
+
+    
+#bg{
+
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  mix-blend-mode: difference;
+  overflow: scroll;
+  max-height: 100vh;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  
+  }
+  #pattern{  
+    background-image:repeating-linear-gradient(black 10px , gray 16px,  white 20px, black 17px, black 20px);
+    height: 200vh;
+    mix-blend-mode: difference;
+    
+  } 
 
   
 p2{
@@ -38,7 +59,11 @@ button{
 
 a{
   color:black;
+  
 }
+
+p{
+margin: 0;}
 
 a:active {
   color: red;
@@ -51,7 +76,10 @@ text-decoration: underline;
 
 .container{
   margin: 40px 5px 0 5px;
-  max-width: calc(100%-10px);
+  max-width: calc(100vw - 10px);
+  overflow-x: hidden;
+
+
 }
 
 #header{
@@ -120,8 +148,12 @@ display: block;
 
   .div{position: absolute;
     max-width: 100px;
-    z-index: 3
+    z-index: 3;
+    display: block;
+margin-right: 5px;
     }
+
+
 
  .list:hover img{
   outline: 2px dotted red;
@@ -130,7 +162,7 @@ display: block;
 .project{
   display: block;
 max-width: calc(100%-10px);
-overflow: hidden;
+overflow: ;
 margin: 0 0 20px 0;
 padding-bottom:0 ;
 }
@@ -164,14 +196,27 @@ z-index: 100;
     outline: dotted;
       }
 
-.div{position: absolute;
-    max-width: 60px;
-    z-index: 3
+.div{
+    max-width: 10%;
+   
     }
       
 
 #header{
   position: relative;
 }
+
+
+html, body {
+
+  font-size: 30pt;
+  line-height: 32pt;
 }
 
+#outdent{
+text-indent: -1em; 
+margin-left: calc(5px + 1em); 
+
+}
+
+}
