@@ -19,8 +19,11 @@
 
   </head>
   <body>
-   <img id="screensaver" src="img/teatowelpic Background Removed.png" onclick="hidesaver()"> 
-    <div id="header">
+    <div id="bg"  onclick="this.style.display = 'none';">
+      <div id="pattern"></div>
+  </div>
+
+  <div id="header">
       <span style="font-family: 'bian';"> V</span>anja   <span style="font-family: 'bian';">H</span> amdahl is an artist educated at Konstfack (SE) and the Gerrit Rietveld Academie (NL). <a href="library.html">library,</a> <p4 onclick="scrolldiv()"><button id="">about.</p4></button>
     </div>
     <div id="header2">  </div>
@@ -113,6 +116,36 @@
             document.getElementById("screensaver").style.visibility="hidden"
     }
 </script>
+<script>
+ 
+  const x = document.getElementById("bg")
+ 
+       x.addEventListener('scroll', function() {
+         const scrollTop = x.scrollTop;
+ 
+       
+         // Calculate opacity based on scroll position
+         let opacity = 1 - (scrollTop / 500); // Adjust 200 for desired fade distance
+         if (opacity < 0) {
+           opacity = 0;
+         }
+         x.style.opacity = opacity;
+       });
+ 
+       x.addEventListener('scroll', function() {
+         const scrollTop = x.scrollTop;
+ 
+       
+         let opacity = 1 - (scrollTop / 500); 
+         if (opacity < 0) {
+           x.style.display="none";
+           x.style.zIndex="0"
+         }
+   
+       });
+       
+     
+       </script>
 
 
 </body>
