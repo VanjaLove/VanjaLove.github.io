@@ -15,18 +15,17 @@
 
 </style>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 
   </head>
   <body>
-    <div id="bg"  onclick="this.style.display = 'none';">
-      <div id="pattern"></div>
-  </div>
+   <div id="bg"></div>
 
   <div id="header">
-      <span style="font-family: 'bian';"> V</span>anja   <span style="font-family: 'bian';">H</span> amdahl is an artist educated at Konstfack (SE) and the Gerrit Rietveld Academie (NL). <a href="library.html">library,</a> <p4 onclick="scrolldiv()"><button id="">about.</p4></button>
-    </div>
-    <div id="header2">  </div>
+      <p><span style="font-family: 'bian';"> V</span>anja   <span style="font-family: 'bian';">H</span> amdahl is an artist educated at Konstfack (SE) and the Gerrit Rietveld Academie (NL). <a href="library.html">library,</a> <p4 onclick="scrolldiv()"><button id="">about.</p4></button>
+      </p>
+  </div>
     <div class="container">
 
       <a href="project1.html" class="project">
@@ -52,7 +51,7 @@
 
       <a href="project-3.html" class="project">
         <div id="title">Sarkofag (2023)</div>
-      <img src="img/23, Sarkofag /sarkofag urval 2.JPG">
+        <img src="img/23, Sarkofag /sarkofag urval 3.jpeg">
       </a>
 
       <a href="project-4.html" class="project">
@@ -75,19 +74,20 @@
 
 
   <div id="footer">
-    About   &emsp;   &emsp;  &emsp;   &emsp;  <button onclick="scrolltop()" id="close" ><p4>(↑)</p4></button>
+    <p4 onclick="scrolldiv()"><button id=""><span style="font-family: 'bian';">A</span>bout</button></p4>   &emsp;   &emsp;  &emsp;  &ensp;  <button onclick="scrolltop()" id="close" ><p4>(↑)</p4></button>
     <br>
     &emsp;Vanja Hamdahl works with weaving and textile printing in relation to digital circulation of information, violence and tenderness.
     <br>
     &emsp;Notions of looking, lenses, screens and a certain disrupted and detached relation to reality as well as a fascination for (living) environments are recurring themes.
     <br><br>
-    Education 
+    <span style="font-family: 'bian';">E</span>ducation 
     
-    <br>
-    &emsp;Gerrit Rietveld Academie, TXT (2023 – 2024, exchange year)
-    <br>
-    &emsp;Konstfack, BFA textiles (2022 —)
-    <br> 
+      <div id="outdent" style="margin-left: 2em;"> 
+       Gerrit Rietveld Academie, TXT (2023 – 2024, exchange year)</p>
+      <p>
+      Konstfack, BFA textiles (2022 —)</p>
+       <br> 
+      </div>
     <div style="font-size: 14pt;  ">
      <a href="https://www.instagram.com/cutegirlwantstokill/">Instagram.</a><br>
       Website designed by <a href="">Einar Zotterman</a>.    <br>
@@ -100,15 +100,12 @@
 
   <script>
     function scrolldiv() {
-        var elem = document
-            .getElementById("footer");
-        elem
-            .scrollIntoView();
+        var elem = document.getElementById("footer");
+        elem.scrollIntoView({behavior: 'smooth'});
     }
 
-    function scrolltop() {
-    window.scrollTo(0,0);
-    }
+    function scrolltop() {window.scrollTo({top: 0, behavior: 'smooth'});}
+
 
 
     function hidesaver() {
@@ -117,35 +114,43 @@
     }
 </script>
 <script>
- 
-  const x = document.getElementById("bg")
- 
-       x.addEventListener('scroll', function() {
-         const scrollTop = x.scrollTop;
- 
-       
-         // Calculate opacity based on scroll position
-         let opacity = 1 - (scrollTop / 500); // Adjust 200 for desired fade distance
-         if (opacity < 0) {
-           opacity = 0;
-         }
-         x.style.opacity = opacity;
-       });
- 
-       x.addEventListener('scroll', function() {
-         const scrollTop = x.scrollTop;
- 
-       
-         let opacity = 1 - (scrollTop / 500); 
-         if (opacity < 0) {
-           x.style.display="none";
-           x.style.zIndex="0"
-         }
+  let timeoutId;
+
+
+ var x = 1;
+  $(document).ready(function(){ 
+    $(document).scroll(function(){
+     (x-= 0.03);  // each scroll input suptracts 0.05 from x.
+
    
-       });
-       
+
+    $(document).on('mousemove keydown', startTimer,);
+    console.log(x);
+    document.getElementById("bg").style.opacity = (x);  // the opacity of bg is set to x
+    
+  });
+});
+
+function startTimer() {
+  clearTimeout(timeoutId);
+  timeoutId = setTimeout(() => {
+  (x = 1);
+  document.getElementById("bg").style.transition = "opacity 1s ease-in-out"
+  document.getElementById("bg").style.opacity = (x)  // the opacity of bg is set to x
+
+  }, 4000); //when 2 seconds pass, x is set to 1 – however, it doesn't update.
+}
+
+ 
+
      
+   
+      
+     
+
+
        </script>
+       
 
 
 </body>

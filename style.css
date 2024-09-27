@@ -10,31 +10,36 @@
 
   html, body {
     margin: 0;
-    padding: 0
-    ;
+    padding: 0;
     font-weight: bold;
     font-size: 36pt;
     max-width: 100vw;
-    background-color: white;
 
+background-color: white;
     
   }
 
+#blackout{
+  
+}
     
 #bg{
-
+  background-image:repeating-linear-gradient(black 10px , gray 16px,  white 20px, black 17px, black 20px);
+  pointer-events: none;
+transform: scale();
+mix-blend-mode: difference;
   width: 100%;
   position: fixed;
+  height: 100vh;
   z-index: 10;
-  mix-blend-mode: difference;
-  overflow: scroll;
-  max-height: 100vh;
   opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+  trasition: none;
+  transition: opacity 1s ease-in-out;
+
+
   
   }
   #pattern{  
-    background-image:repeating-linear-gradient(black 10px , gray 16px,  white 20px, black 17px, black 20px);
     height: 200vh;
     mix-blend-mode: difference;
     
@@ -63,7 +68,8 @@ a{
 }
 
 p{
-margin: 0;}
+margin: 0;
+}
 
 a:active {
   color: red;
@@ -83,12 +89,13 @@ text-decoration: underline;
 }
 
 #header{
-  margin: 0 0 0 5px;
+  margin: -5px 0 0 5px;
   position: sticky;
   top: 0;
   z-index: 1;
   -webkit-transform: translateZ(0);
-  width: calc(100%-5px)
+  width: calc(100%-5px);
+  outline: doted;
   
 
   }
@@ -122,7 +129,7 @@ margin-bottom: 20px;
 
 
   #title:hover{
-    background-color:#BAB3FC
+    background-color:#BAB3FC;
 
   }
 
@@ -130,9 +137,11 @@ margin-bottom: 20px;
     background-color:#BAB3FC;
 
 
+
   } 
   button:hover{
     background-color:#BAB3FC;
+
   }
   button:active{
 color: red;  }
@@ -182,6 +191,12 @@ z-index: 100;
 }
 
 
+#outdent{
+text-indent: -1em; 
+margin-left: calc(5px + 1em); 
+
+}
+
 @media (max-width: 1000px) {
 
 
@@ -210,13 +225,8 @@ z-index: 100;
 html, body {
 
   font-size: 30pt;
-  line-height: 32pt;
 }
 
-#outdent{
-text-indent: -1em; 
-margin-left: calc(5px + 1em); 
 
-}
 
 }
