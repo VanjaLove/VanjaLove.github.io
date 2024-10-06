@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Vanja Hamdahl</title>
+
+    <link rel="icon" type="image/x-icon" href="img/icon.png"/>
+    <link rel="stylesheet" href="style.css"/>
+<style>
+html,body{
+  background-color:#E7E682
+
+}
+
+#spawn{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+outline: dotted;
+}
+
+.div{position: absolute;
+max-width: 150px;}
+  </style>
+
+  </head>
+  <body>
+   
+
+
+
+
+      <div id="header"><a href="library.html" >(↜)</a> &emsp;&emsp;&emsp;</div>
+  
+    <div class="container">
+
+
+      <div class="text">
+       <br>
+       <p3>
+I had this other dream tonight
+        I was in a very big hotel room
+        In this skyscraper, this grey skyscraper that just went on forever, no windows just stairs and floors.
+        We were sleeping on a mattress on the floor
+        And I looked away into this huge room and I could see a fountain and
+        Someone, who was out to get me or something, left a bunch of animals there
+        Im not sure which ones I think maybe rats
+        That ran toward me
+        And then I see two meters from the bed there are these three huge snakes, fat black ones. They’re thick like the neck of those geese I dreamt about. And I think the snake can smell me, I look at it and it JUMPS
+        Into the bed, on me, under the covers
+        And I think we go out of the bed, or maybe I wake up again? And I am maybe bit because then we are looking for a hospital, and I think there is blood on me, and we go up to get away from the snakes  that are loose in the building, and we pass these different floors, a children’s hospital, another hospital, the wrong one. And then we go there on floor number seven and I go in alone and I don’t remember what happened, some kind of waiting room
+        And suddenly I realize I am sitting by my computer, and I think in the bed again, but this time its a real bed of the floor not just the madness, in the same hotel room. But I am staring at my my computer like in a trance, and its playing this song. Like this, I can’t even describe it, but I remember very clearly, an ominous satanic sound, an electronic base sound and it sounds very psychedelic and i just know it is evil. And there is this voice talking, and I can’t remember what it said but it was a really scary voice talking to me like a hypnotizer. And this song has been playing but I don’t realize it until now, and I try to close the tab on my computer, and there are so many tabs that I’m closing, and it keeps playing even though this must be longer than the song right? I then I close the computer and the sound keeps going and I realize its just in the world, in my head, and its this terrifying feeling. And then I feel something heavy on my leg, and I see its this thick black snake .
+      </p3>
+
+      </div>
+      
+      </div>
+       
+  </div>
+
+  <script>
+    function scrolldiv() {
+        var elem = document
+            .getElementById("footer");
+        elem
+            .scrollIntoView();
+    }
+
+
+    
+</script>
+
+
+<script>
+
+
+        // collect all the divs
+        var divs = document.getElementsByClassName('div');
+      // get window width and height
+      const element = document.getElementById("spawn");
+      var winWidth = element.clientWidth -300 ;
+      var winHeight = element.clientHeight -300 ;
+      
+      // i stands for "index". you could also call this banana or haircut. it's a variable
+      for ( var i=0; i < divs.length; i++ ) {
+         
+          // shortcut! the current div in the list
+          var thisDiv = divs[i];
+          
+          // get random numbers for each element
+          randomTop = getRandomNumber(0, winHeight);
+          randomLeft = getRandomNumber(0, winWidth);
+          
+          // update top and left position
+          thisDiv.style.top = randomTop +60 +"px";
+          thisDiv.style.left = randomLeft +60 +"px";
+          
+      }
+      
+      // function that returns a random number between a min and max
+      function getRandomNumber(min, max) {
+          
+        return Math.random() * (max - min) + min;
+          
+      }
+
+
+
+
+</script>
+  </body>
+</html>

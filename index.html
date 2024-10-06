@@ -20,19 +20,27 @@
 
   </head>
   <body>
-   <div id="bg"></div>
-
+  <div id="bg"></div>
   <div id="header">
-      <p><span style="font-family: 'bian';"> V</span>anja   <span style="font-family: 'bian';">H</span> amdahl is an artist educated at Konstfack (SE) and the Gerrit Rietveld Academie (NL). <a href="library.html">library,</a> <p4 onclick="scrolldiv()"><button id="">about.</p4></button>
+      <p><span style="font-family: 'bian';"> V</span>ANJA   <span style="font-family: 'bian';">H</span> AMDAHL was born on the 4th of July. This is her website. 
+
+     
+      
+       <p4 onclick="scrolldiv()"><button id="">About</button></p4> • <a href="library.html">
+        Desktop.</a>
+    </ul>
+    <br>
+
       </p>
+   
   </div>
     <div class="container">
-
+      --
       <a href="project1.html" class="project">
           <div href="project1.html" id="title">Six Signs (2024)  
           </div>
         <img src="img/sex tecken select/DSC03054.JPG">
-        </a>
+      </a>
 
       <a href="project0.html" class="project">
         <div href="project0.html" id="title">Setting a trap (2023)</div>
@@ -60,7 +68,7 @@
       </a>
 
       <a href="project-6.html" class="project">
-        <div id="title">Fallskärm (2023)</div>
+        <div id="title">Canopy (2023)</div>
       <img src="img/23 Fallskärm/554EF2D9-C3A3-4AFF-ABB3-C318682703A8.JPG">
       </a>
 
@@ -73,14 +81,14 @@
     </div>
 
 
-  <div id="footer">
-    <p4 onclick="scrolldiv()"><button id=""><span style="font-family: 'bian';">A</span>bout</button></p4>   &emsp;   &emsp;  &emsp;  &ensp;  <button onclick="scrolltop()" id="close" ><p4>(↑)</p4></button>
-    <br>
+  <div id="footer"> <div id="about">
+   ABOUT   &emsp;   &emsp;  &emsp;   <button onclick="scrolltop()" id="close" ><p4>(↑)</p4></button>
+   <br>
     &emsp;Vanja Hamdahl works with weaving and textile printing in relation to digital circulation of information, violence and tenderness.
     <br>
     &emsp;Notions of looking, lenses, screens and a certain disrupted and detached relation to reality as well as a fascination for (living) environments are recurring themes.
     <br><br>
-    <span style="font-family: 'bian';">E</span>ducation 
+   EDUCATION 
     
       <div id="outdent" style="margin-left: 2em;"> 
        Gerrit Rietveld Academie, TXT (2023 – 2024, exchange year)</p>
@@ -88,9 +96,10 @@
       Konstfack, BFA textiles (2022 —)</p>
        <br> 
       </div>
-    <div style="font-size: 14pt;  ">
+    </div>
+    <div id="footerfooter">
      <a href="https://www.instagram.com/cutegirlwantstokill/">Instagram.</a><br>
-      Website designed by <a href="">Einar Zotterman</a>.    <br>
+      Website designed by <a href="https://www.einarzotterman.com">Einar Zotterman</a>.    <br>
       <span style="font-family: 'bian';">Bian Zhi Dai</span> font drawn by 
       <a href="https://www.notyourtype.nl/typefaces/">Xiaoyuan Gao.</a> <br>
       &copy; 2024 Vanja Hamdahl.
@@ -108,10 +117,7 @@
 
 
 
-    function hidesaver() {
-
-            document.getElementById("screensaver").style.visibility="hidden"
-    }
+   
 </script>
 <script>
   let timeoutId;
@@ -124,7 +130,7 @@
 
    
 
-    $(document).on('mousemove keydown', startTimer,);
+    $(document).on('mousemove keydown touchstart', startTimer,);
     console.log(x);
     document.getElementById("bg").style.opacity = (x);  // the opacity of bg is set to x
     
