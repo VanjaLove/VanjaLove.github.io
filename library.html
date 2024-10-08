@@ -76,10 +76,9 @@ opacity: 0%;
 <div id="blackout">
 </div>
 
-  <img class="div" >
     <div id="header">
       
-      <span style="font-family: 'bian';"> V</span>ANJA'S DESKTOP. <span style="white-space: nowrap;"><a href="index.html">Back to portfolio</a></span> • <p4><button id="thumbs">Hide thumbnails.</button></p4>
+      <span style="font-family: 'bian';"> V</span>ANJA'S DESKTOP. <span style="white-space: nowrap;"><a href="index.html">Back to portfolio</a></span> • <p4><button id="thumbs">Clean up.</button></p4>
 
 
     </div>
@@ -230,32 +229,53 @@ opacity: 0%;
         return Math.random() * (max - min) + min;
           
       }
+    
 
 
 var thumbs = document.getElementById("thumbs")
-var divs = document.getElementsByClassName("div")
-var thisDiv = divs[i];
+
+thumbs.addEventListener('click', order());
+
+if ($(window).width() < 1000 || $(window).height() < 480) {
+  
+
+if (thumbs.innerHTML === "Clean up."){
+    thumbs.innerHTML = "Scatter." ;
+
+ }else{    
+
+thumbs.innerHTML = "Clean up."
+ }
+ var ele = document.getElementsByClassName('div');
+ for (var i = 0; i < ele.length; i++ ) {
+    ele[i].classList.toggle('tiny');
+ }
+ 
+
+  }
 
 
-thumbs.addEventListener('click', function(){
+function order(){
+  return function (){
 
-   
-  $('.div').toggle(); // Shows
+if (thumbs.innerHTML === "Clean up."){
+    thumbs.innerHTML = "Scatter." ;
 
-  if (thumbs.innerHTML === "Hide thumbnails."){
-      thumbs.innerHTML = "Show thumbnails." ;
+ }else{    
 
-   }else{    
+thumbs.innerHTML = "Clean up."
+ }
+ var ele = document.getElementsByClassName('div');
+ for (var i = 0; i < ele.length; i++ ) {
+    ele[i].classList.toggle('tiny');
+ }
+ 
+}}
 
-thumbs.innerHTML = "Hide thumbnails."
-   }
+</script>
 
-
-
-}
-)
-
-
+<script>
+ 
 </script>
 
   </body>
