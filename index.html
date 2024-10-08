@@ -142,7 +142,8 @@ function startTimer() {
   timeoutId = setTimeout(() => {
   (x = 1);
   document.getElementById("bg").style.transition = "opacity 1s ease-in-out"
-  document.getElementById("bg").style.opacity = (x)  // the opacity of bg is set to x
+  document.getElementById("bg").style.opacity = (x)
+  document.getElementById("bg").style.mixBlendMode = "difference"   // the opacity of bg is set to x
 
   }, 4000); //when 2 seconds pass, x is set to 1 – however, it doesn't update.
 }
