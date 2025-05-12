@@ -9,6 +9,8 @@
 body{
   box-sizing: border-box;
   text-align: center;
+  margin:0;
+  padding: 0;
 
 }
 *, *:before, *:after {
@@ -39,6 +41,14 @@ margin-bottom: 20px ;
   margin:100px
 }
 
+#wrapper{
+  margin:0;
+  padding: 0;
+  max-width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
 
 </style>
@@ -53,11 +63,11 @@ margin-bottom: 20px ;
    <div id="button">
     <button style="margin: auto; display: block;" onclick="nextVideo();hidebutton()">my life is a movie</button>
   </div>
-  
 
+    <div id="wrapper">
     <div id="player"></div>
     <div id="player2"></div>
-
+  </div>
     <script src="http://reverbjs.org/reverb.js"></script>
 
    
@@ -101,8 +111,8 @@ function onYouTubeIframeAPIReady() {
                 }
   });
   player2 = new YT.Player('player2', {
-    height: '490',
-    width: '840',
+    height: 'auto',
+    width: '50%',
     playerVars: {
        listType:'playlist',
         list: 'PLPHNqW1AXqvSmTdjO-tsh_syNYxX_XuSm',
