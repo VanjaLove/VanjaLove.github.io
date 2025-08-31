@@ -202,8 +202,8 @@ flex-direction: column;
 #footerfooter{
   margin-top: -30px;
   padding-top: 30px;
-
   font-size: 14pt; 
+  line-height: 16pt;
   bottom:  0px; 
   ;
     z-index: 200;
