@@ -68,8 +68,7 @@ a{
 p{
 margin: 0;
 display: block;
-line-height: 38pt;
-outline: doted;}
+;}
 
 a:active {
   color: red;
